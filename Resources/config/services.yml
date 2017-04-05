@@ -1,0 +1,10 @@
+services:
+    rudak_seo.builder:
+        class: Rudak\SeoBundle\Core\MetaBuilder
+        arguments: ['%rudak_seo%']
+
+    rudak.twig_extension.seo:
+        class: Rudak\SeoBundle\Twig\SeoExtension
+        arguments: ['@rudak_seo.builder']
+        tags:
+            - { name: twig.extension }
