@@ -1,5 +1,12 @@
 {
   "name": "rudak/seo_bundle",
+  "authors": [
+    {
+      "name": "Kadur Arnaud",
+      "email": "contact@kadur-arnaud.fr",
+      "homepage": "http://kadur-arnaud.fr"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "Rudak\\SeoBundle\\": "/"
