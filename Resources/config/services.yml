@@ -8,3 +8,9 @@ services:
         arguments: ['@rudak_seo.builder']
         tags:
             - { name: twig.extension }
+
+    rudak.contact.listener:
+        class: AppBundle\Events\ContactListener
+        arguments: ['@twig']
+        tags:
+            - { name: kernel.event_listener, event: contact.event, method: sendContactMail }

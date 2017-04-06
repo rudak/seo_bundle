@@ -1,9 +1,5 @@
 <?php
-
-namespace Rudak\SeoBundle\Entity;
-
-use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
+namespace Rudak\SeoBundle\Model;
 
 /**
  * Meta
@@ -24,17 +20,13 @@ class Meta
 
     private $og_description;
 
-    /**
-     * @Assert\Choice({"New York", "Berlin", "Tokyo"})
-     */
     private $og_type;
 
     private $og_image;
 
-    /**
-     * @Assert\Choice({"fr_FR", "en_EN"})
-     */
     private $og_locale;
+
+    #TODO: Add alternate locale
 
     private $fb_app_id;
 

@@ -1,14 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: rudak
- * Date: 01/04/2017
- * Time: 14:57
- */
-
 namespace Rudak\SeoBundle\Core;
 
-use Rudak\SeoBundle\Entity\Meta;
+use Rudak\SeoBundle\Model\Meta;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 
@@ -27,8 +20,9 @@ class MetaBuilder
     }
 
     /**
-     * @param array $values
-     * @return object
+     * Construit l'objet Meta a partir d'un tableau de config
+     * @param array $values contenant les valeurs d'hydratation de Meta
+     * @return object Meta
      */
     public static function buildMetaObject(array $values)
     {
@@ -39,6 +33,10 @@ class MetaBuilder
         return $meta;
     }
 
+    /**
+     * Met a jour l'objet Meta et lance une validation
+     * @param array $values
+     */
     public function updateMetaObject(array $values)
     {
         MetaObjectUpdater::update($this->meta, $values);
