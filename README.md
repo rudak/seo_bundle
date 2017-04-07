@@ -1,18 +1,20 @@
 # seo_bundle
 Manage your meta tags easily
 
-##Installation
+### Installation
 
     composer require rudak/seo_bundle
 
-##Enable the Bundle
+### Enable the Bundle
 
     #AppKernel.php
     $bundles = [
                 //...
                 new Rudak\SeoBundle\RudakSeoBundle(),
             ];
-##Configuration
+### Configuration
+
+Some parameters are required and some optional
 
     #config.yml
     rudak_seo:
@@ -26,12 +28,13 @@ Manage your meta tags easily
         og_locale: fr_FR                                     #optional
         fb_app_id: abcdefghijklmnopqrstuvwxyz0123456789      #optional
         
-##Usage
+### Usage
 
-The Meta Onject is auto configured with de default values from config.yml.
+The Meta Object is auto configured with de default values from config.yml.
 You just have to call twig functions in your view for print the hydrated meta tag.
 
-####Basic example:
+### Basic example:
+
 
     <!DOCTYPE html>
     <html lang="fr">
@@ -58,7 +61,7 @@ Will become
         <meta name="author" content="your default author">
     </head>
     
-####Update the values in your controller
+### Update the values in your controller
     
     public function blogAction($id)
         {
@@ -79,4 +82,5 @@ Will become
             ]);
         }
         
-The values will be updated in your template. That's all  ;)
+The values will be updated in your template.
+That's all  ;)
