@@ -1,5 +1,11 @@
 {
   "name": "rudak/seo_bundle",
+  "license": "MIT",
+  "require": {
+    "php": "^5.5.9 || ^7.0",
+    "twig/twig": "^1.28 || ^2.0",
+    "symfony/templating": "^2.7 || ^3.0"
+  },
   "authors": [
     {
       "name": "Kadur Arnaud",
@@ -13,3 +19,7 @@
     }
   }
 }
+
+
+
+
